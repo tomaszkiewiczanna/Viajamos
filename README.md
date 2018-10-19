@@ -1,2 +1,2 @@
-﻿## Portfolio page in React
-still in progress
+﻿## React and Firebase app
+A register and login page to start work with firebase

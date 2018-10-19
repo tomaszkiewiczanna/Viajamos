@@ -1,40 +1,46 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import fire from './config';
+import firebase from './Config.jsx';
+import Login from "./modules/Login.jsx";
+import Home from "./modules/Home.jsx";
 
 document.addEventListener('DOMContentLoaded', () => {
-    class App extends React.Component {
-        constructor(props){
+    class Start extends React.Component {
+        constructor(props) {
             super(props);
-            this.state ={
-                user: {}
-            }
+            this.state = {
+                user: null
+            };
         }
+        authListener = () => {
+            firebase.auth().onAuthStateChanged((user) => {
+                if (user) {
+                    this.setState({user});
+                    localStorage.setItem('user', user.uid);
+                } else {
+                    this.setState({user: null});
+                    localStorage.removeItem('user');
+                }
+            });
+        };
 
         componentDidMount() {
             this.authListener();
         }
 
-        authListener() {
-            fire.auth().onAuthStateChanged((user) => {
-                //console.log(user);
-                if (user) {
-                    this.setState({ user });
-                    localStorage.setItem('user', user.uid);
-                } else {
-                    this.setState({ user: null });
-                    localStorage.removeItem('user');
-                }
-            });
-        }
         render() {
-            return <div>
-                if ( this.state.user) {
-                <Home/>
+            if (this.state.user === null){
+                return <Login/>
             } else {
-                <Login/>
+                return <Home user={this.state.user}/>
             }
-            </div>;
+
+        }
+    }
+
+    class App extends React.Component {
+        render() {
+            return <Start/>
         }
     }
 
