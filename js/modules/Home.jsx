@@ -4,6 +4,9 @@ import firebase from './../Config.jsx';
 class Home extends React.Component {
     constructor(props) {
         super(props);
+        this.state={
+            user: this.props.user
+        }
     }
 
     logout = () => {
@@ -11,9 +14,11 @@ class Home extends React.Component {
     };
 
     render() {
+        console.log(this.state.user);
+
         return (
             <div>
-                <h1>Welcome Home {this.props.user.email}</h1>
+                <h1>Welcome Home {this.state.user.email}</h1>
                 <button onClick={this.logout}>Logout</button>
             </div>
         );

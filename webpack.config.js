@@ -1,7 +1,7 @@
 var path = require("path");
 module.exports = {
     entry: ['whatwg-fetch', './js/pageapp.jsx'],
-    output: { filename: "out.js", path: path.resolve(__dirname, "js") },
+    output: {filename: "out.js", path: path.resolve(__dirname, "js")},
     devServer: {
         inline: true,
         contentBase: './',
@@ -22,6 +22,11 @@ module.exports = {
                     ]
                 }
             }
-        }]
+        },
+            {
+                test: /\.css$/,
+                loader: 'style-loader!css-loader'
+            }
+        ]
     }
 }

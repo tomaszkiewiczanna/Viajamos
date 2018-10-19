@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import firebase from './Config.jsx';
 import Login from "./modules/Login.jsx";
 import Home from "./modules/Home.jsx";
+import './../css/style.css';
 
 document.addEventListener('DOMContentLoaded', () => {
     class Start extends React.Component {

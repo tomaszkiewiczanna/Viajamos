@@ -1,2 +1,8 @@
-﻿## React and Firebase app
-A register and login page to start work with firebase
+﻿## Viajamos
+An React app that helps the User plan and organise the trip.
+
+
+### what still needs some more work?
+Work in progress.
+ - app interface
+ - styling
