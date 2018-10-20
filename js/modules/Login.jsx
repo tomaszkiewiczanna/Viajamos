@@ -17,7 +17,7 @@ class Login extends React.Component {
                 text: error.message,
             })
         }
-    }
+    };
 
     handleEmailChange = (e) => {
         this.setState({
@@ -53,6 +53,7 @@ class Login extends React.Component {
 
     render() {
         return <div className="login-container">
+            <h1 className="login-big-logo">viajamos</h1>
             <form className="login-form">
                 <label>Email address</label>
                 <input value={this.state.email} onChange={this.handleEmailChange} type="email" name="email"
