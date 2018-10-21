@@ -56,7 +56,6 @@ class Login extends React.Component {
             <h1 className="login-big-logo">viajamos</h1>
             <form className="login-form">
                 <div className="login-form-inputs">
-                    <p className="login-error-message">{this.state.text}</p>
                     <input value={this.state.email} onChange={this.handleEmailChange} type="email" name="email"
                            className="login-form-input" id="email-input"
                            placeholder="Enter your e-mail"
@@ -66,6 +65,7 @@ class Login extends React.Component {
                            className="login-form-input" id="pass-email" placeholder="Password"
                     />
                 </div>
+                <p className="login-error-message">{this.state.text}</p>
                 <div className="login-form-btns">
                     <button onClick={this.login} className="login-form-btn login-btn">Login</button>
                     <button onClick={this.signup} className="login-form-btn signup-btn">Sign up</button>
