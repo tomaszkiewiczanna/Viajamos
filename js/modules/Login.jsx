@@ -55,20 +55,23 @@ class Login extends React.Component {
         return <div className="login-container">
             <h1 className="login-big-logo">viajamos</h1>
             <form className="login-form">
-                <label>Email address</label>
-                <input value={this.state.email} onChange={this.handleEmailChange} type="email" name="email"
-                       className="login-form-input" id="email-input"
-                       placeholder="Enter email"
-                />
+                <div className="login-form-inputs">
+                    <p className="login-error-message">{this.state.text}</p>
+                    <input value={this.state.email} onChange={this.handleEmailChange} type="email" name="email"
+                           className="login-form-input" id="email-input"
+                           placeholder="Enter your e-mail"
+                    />
 
-                <label>Password</label>
-                <input value={this.state.password} onChange={this.handlePasswordChange} type="password" name="password"
-                       className="login-form-input" id="pass-email" placeholder="Password"
-                />
-                <button onClick={this.login} className="login-btn">Login</button>
-                <button onClick={this.signup} className="login-btn">Sign up</button>
+                    <input value={this.state.password} onChange={this.handlePasswordChange} type="password" name="password"
+                           className="login-form-input" id="pass-email" placeholder="Password"
+                    />
+                </div>
+                <div className="login-form-btns">
+                    <button onClick={this.login} className="login-form-btn login-btn">Login</button>
+                    <button onClick={this.signup} className="login-form-btn signup-btn">Sign up</button>
+                </div>
             </form>
-            <h1>{this.state.text}</h1>
+
         </div>
     }
 }
