@@ -1,0 +1,98 @@
+body{
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+    background: url('../images/background-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+}
+.login-container{
+    margin: 90px auto 0 auto;
+    width: 25vw;
+    height: auto;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.login-big-logo{
+    font-family: 'Satisfy', cursive;
+    color: #ff8991;
+    font-size: 68px;
+    margin: 10px;
+    letter-spacing: 1.5px;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-form-inputs{
+    text-align: center;
+}
+.login-form-input{
+    width: 250px;
+    height: 30px;
+    border-radius: 15px;
+    font-size: 14px;
+    border: 1px solid #9b9b9b;
+    padding: 3px;
+    text-align: center;
+    margin-bottom: 5px;
+    -webkit-box-shadow: 0 0 20px 9px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 0 20px 9px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 20px 9px rgba(0, 0, 0, 0.08);
+}
+.login-form-input:focus{
+    outline: none;
+    color: #353535;
+}
+.login-form-input:focus::-webkit-input-placeholder { color:transparent; }
+.login-form-input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+.login-form-input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+.login-form-input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+.login-form-btns{
+    display: flex;
+}
+.login-form-btn{
+    width: 95px;
+    height: 30px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    transition: 0.5s;
+    margin: 0 15px;
+    -webkit-box-shadow: 0 0 20px 9px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0 0 20px 9px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 0 20px 9px rgba(0, 0, 0, 0.16);
+}
+.login-form-btn:focus{
+    outline: none;
+}
+.login-form-btn:hover{
+    cursor: pointer;
+    color: #dddddd;
+}
+.login-btn{
+    background: #4eb0ad;
+    border: 1px solid #4caeac;
+}
+.login-btn:hover{
+    background: #3a827f;
+    border: 1px solid #3a827f;
+}
+.signup-btn{
+    background: #3c3c3c;
+    border: 1px solid #373737;
+}
+.signup-btn:hover{
+    background: #505050;
+    border: 1px solid #505050;
+}
+.login-error-message{
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+}
