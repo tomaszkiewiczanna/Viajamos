@@ -1,5 +1,5 @@
-import React from 'react';
-import firebase from './../Config.jsx';
+import React, { Component } from 'react';
+import firebase from './../Config';
 
 class Login extends React.Component {
     constructor(props) {
