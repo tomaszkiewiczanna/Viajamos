@@ -27,12 +27,14 @@ class UserSettings extends React.Component {
             }).catch(function(error) {
                 console.log('not updated')
             });
+        } else {
+            this.setState({
+                text: 'Type in your name, please.'
+            })
         }
-
     };
 
     render() {
-
         return (
             <div className="userSettings-container">
                 <h1 className="login-big-logo">viajamos</h1>
@@ -43,11 +45,11 @@ class UserSettings extends React.Component {
                                placeholder="What's your name?"
                         />
                     </div>
-                    <p className="userSetting-error-message">{this.state.text}</p>
                     <div className="userSetting-form-btns">
                         <button onClick={this.changeName} className="userSetting-btn">Set name</button>
                     </div>
                 </form>
+                <p className="userSetting-error-message">{this.state.text}</p>
             </div>
         );
 

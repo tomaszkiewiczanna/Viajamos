@@ -111,7 +111,8 @@ body{
   background: #505050;
   border: 1px solid #505050;
 }
-.login-error-message{
+.login-error-message,
+.userSetting-error-message{
   text-align: center;
   color: white;
   font-weight: 600;
