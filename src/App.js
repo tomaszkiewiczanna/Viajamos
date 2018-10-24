@@ -3,6 +3,7 @@ import './App.css';
 import firebase from './Config';
 import Login from "./modules/Login";
 import Home from "./modules/Home";
+import UserSettings from "./modules/UserSettings";
 
 class Start extends React.Component {
     constructor(props) {
@@ -28,10 +29,12 @@ class Start extends React.Component {
     }
 
     render() {
-        if (this.state.user === null){
-            return <Login/>
-        } else {
+        if (this.state.user !== null && this.state.user.displayName !== null){
             return <Home user={this.state.user}/>
+        } else if (this.state.user !== null && this.state.user.displayName === null){
+            return <UserSettings user={this.state.user}/>
+        } else{
+            return <Login/>
         }
 
     }

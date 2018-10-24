@@ -18,7 +18,7 @@ class Home extends React.Component {
 
         return (
             <div>
-                <h1>Welcome Home {this.state.user.email}</h1>
+                <h1>Welcome Home {this.state.user.displayName}</h1>
                 <button onClick={this.logout}>Logout</button>
             </div>
         );

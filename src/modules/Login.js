@@ -71,7 +71,6 @@ class Login extends React.Component {
                     <button onClick={this.signup} className="login-form-btn signup-btn">Sign up</button>
                 </div>
             </form>
-
         </div>
     }
 }
