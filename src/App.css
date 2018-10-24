@@ -5,7 +5,8 @@ body{
   background-size: cover;
   box-sizing: border-box;
 }
-.login-container{
+.login-container,
+.userSettings-container{
   margin: 90px auto 0 auto;
   width: 25vw;
   height: auto;
@@ -27,10 +28,16 @@ body{
   flex-direction: column;
   align-items: center;
 }
-.login-form-inputs{
+.userSettings-form{
+  display: flex;
+  transform: translateX(16%);
+}
+.login-form-inputs,
+.userSetting-form-inputs{
   text-align: center;
 }
-.login-form-input{
+.login-form-input,
+.userSettings-form-input{
   width: 250px;
   height: 30px;
   border-radius: 15px;
@@ -43,7 +50,8 @@ body{
   -moz-box-shadow: 0 0 20px 9px rgba(0, 0, 0, 0.08);
   box-shadow: 0 0 20px 9px rgba(0, 0, 0, 0.08);
 }
-.login-form-input:focus{
+.login-form-input:focus,
+.userSettings-form-input:focus{
   outline: none;
   color: #353535;
 }
@@ -51,10 +59,17 @@ body{
 .login-form-input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
 .login-form-input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
 .login-form-input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+.userSettings-form-input:focus::-webkit-input-placeholder { color:transparent; }
+.userSettings-form-input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+.userSettings-form-input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+.userSettings-form-input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
 .login-form-btns{
   display: flex;
 }
-.login-form-btn{
+.login-form-btn,
+.userSetting-btn{
   width: 95px;
   height: 30px;
   border-radius: 5px;
@@ -66,18 +81,25 @@ body{
   -moz-box-shadow: 0 0 20px 9px rgba(0, 0, 0, 0.16);
   box-shadow: 0 0 20px 9px rgba(0, 0, 0, 0.16);
 }
-.login-form-btn:focus{
+.userSetting-btn{
+  height: 38px;
+}
+.login-form-btn:focus,
+.userSetting-btn:focus{
   outline: none;
 }
-.login-form-btn:hover{
+.login-form-btn:hover,
+.userSetting-btn:hover{
   cursor: pointer;
   color: #dddddd;
 }
-.login-btn{
+.login-btn,
+.userSetting-btn{
   background: #4eb0ad;
   border: 1px solid #4caeac;
 }
-.login-btn:hover{
+.login-btn:hover,
+.userSetting-btn:hover{
   background: #3a827f;
   border: 1px solid #3a827f;
 }

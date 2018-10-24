@@ -19,24 +19,24 @@ class UserSettings extends React.Component {
 
     changeName = (e) => {
         e.preventDefault();
-        firebase.auth().currentUser.updateProfile({
-            displayName: this.state.name,
-        }).then(function() {
-            console.log('updated');
-            console.log(this.state.user);
+        if (this.state.name !== ""){
+            firebase.auth().currentUser.updateProfile({
+                displayName: this.state.name,
+            }).then(function() {
+                console.log('updated');
+            }).catch(function(error) {
+                console.log('not updated')
+            });
+        }
 
-
-        }).catch(function(error) {
-            console.log('not updated')
-        });
     };
 
     render() {
 
         return (
-            <div className="userSetting-container">
+            <div className="userSettings-container">
                 <h1 className="login-big-logo">viajamos</h1>
-                <form className="settings-form">
+                <form className="userSettings-form">
                     <div className="userSetting-form-inputs">
                         <input value={this.state.name} onChange={this.handleNameChange} type="name" name="name"
                                className="userSettings-form-input" id="name-input"
