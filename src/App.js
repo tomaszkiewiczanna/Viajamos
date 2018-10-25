@@ -17,6 +17,7 @@ class Start extends React.Component {
             if (user) {
                 this.setState({user});
                 localStorage.setItem('user', user.uid);
+
             } else {
                 this.setState({user: null});
                 localStorage.removeItem('user');

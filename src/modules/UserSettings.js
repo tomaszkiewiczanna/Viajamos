@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import firebase from './../Config';
+import Home from "./Home";
 
 class UserSettings extends React.Component {
     constructor(props) {
@@ -22,11 +23,14 @@ class UserSettings extends React.Component {
         if (this.state.name !== ""){
             firebase.auth().currentUser.updateProfile({
                 displayName: this.state.name,
-            }).then(function() {
-                console.log('updated');
-            }).catch(function(error) {
+            }).then(() =>{
+                this.setState({
+                    text: ''
+                })
+            }).catch(function() {
                 console.log('not updated')
             });
+
         } else {
             this.setState({
                 text: 'Type in your name, please.'
@@ -35,23 +39,29 @@ class UserSettings extends React.Component {
     };
 
     render() {
-        return (
-            <div className="userSettings-container">
-                <h1 className="login-big-logo">viajamos</h1>
-                <form className="userSettings-form">
-                    <div className="userSetting-form-inputs">
-                        <input value={this.state.name} onChange={this.handleNameChange} type="name" name="name"
-                               className="userSettings-form-input" id="name-input"
-                               placeholder="What's your name?"
-                        />
-                    </div>
-                    <div className="userSetting-form-btns">
-                        <button onClick={this.changeName} className="userSetting-btn">Set name</button>
-                    </div>
-                </form>
-                <p className="userSetting-error-message">{this.state.text}</p>
-            </div>
-        );
+        if (this.props.user.displayName === null){
+            return (
+                <div className="userSettings-container">
+                    <h1 className="login-big-logo">viajamos</h1>
+                    <form className="userSettings-form">
+                        <div className="userSetting-form-inputs">
+                            <input value={this.state.name} onChange={this.handleNameChange} type="name" name="name"
+                                   className="userSettings-form-input" id="name-input"
+                                   placeholder="What's your name?"
+                            />
+                        </div>
+                        <div className="userSetting-form-btns">
+                            <button onClick={this.changeName} className="userSetting-btn">Set name</button>
+                        </div>
+                    </form>
+                    <p className="userSetting-error-message">{this.state.text}</p>
+                </div>
+            );
+        } else {
+            return (
+                <Home user={this.state.user}/>
+            )
+        }
 
     }
 }

@@ -34,8 +34,7 @@ class Login extends React.Component {
     signup = (e) => {
         e.preventDefault();
         firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
-        }).then((u) => {
-            console.log(u)
+        }).then(() => {
         })
             .catch((error) => {
                 this.error(error)
@@ -45,7 +44,7 @@ class Login extends React.Component {
 
     login = (e) => {
         e.preventDefault();
-        firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u) => {
+        firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then(() => {
         }).catch((error) => {
             this.error(error)
         });
