@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from './../Config';
+import NavBar from './NavBar';
 
 class Home extends React.Component {
     constructor(props) {
@@ -9,17 +10,10 @@ class Home extends React.Component {
         }
     }
 
-    logout = () => {
-        firebase.auth().signOut();
-    };
-
     render() {
-        console.log(this.state.user);
-
         return (
             <div>
-                <h1>Welcome Home {this.state.user.displayName}</h1>
-                <button onClick={this.logout}>Logout</button>
+                <NavBar user={this.state.user}/>
             </div>
         );
 
