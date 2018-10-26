@@ -13,7 +13,7 @@ class NavBar extends React.Component {
         return <div className="navbar">
             <h1 className="small-logo">viajamos</h1>
             <div className="navbar-right">
-                <p className="navbar-right-sayhi">Hello, {this.props.user.displayName}</p>
+                <p className="navbar-right-sayhi">Hello, {this.props.user.displayName}!</p>
                 <button  className="navbar-right-logout" onClick={this.logout}>Logout</button>
             </div>
 

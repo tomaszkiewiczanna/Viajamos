@@ -16,12 +16,16 @@ body{
   align-items: center;
 
 }
-.login-big-logo{
+.login-big-logo,
+.small-logo{
   font-family: 'Satisfy', cursive;
   color: #ff8991;
   font-size: 68px;
   margin: 10px;
   letter-spacing: 1.5px;
+}
+.small-logo{
+  font-size: 20px;
 }
 .login-form{
   display: flex;
@@ -69,7 +73,8 @@ body{
   display: flex;
 }
 .login-form-btn,
-.userSetting-btn{
+.userSetting-btn,
+.navbar-right-logout{
   width: 95px;
   height: 30px;
   border-radius: 5px;
@@ -94,12 +99,14 @@ body{
   color: #dddddd;
 }
 .login-btn,
-.userSetting-btn{
+.userSetting-btn,
+.navbar-right-logout{
   background: #4eb0ad;
   border: 1px solid #4caeac;
 }
 .login-btn:hover,
-.userSetting-btn:hover{
+.userSetting-btn:hover,
+.navbar-right-logout:hover{
   background: #3a827f;
   border: 1px solid #3a827f;
 }
@@ -117,4 +124,20 @@ body{
   color: white;
   font-weight: 600;
   font-size: 14px;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+.navbar-right{
+  display: flex;
+  color: white;
+  align-items: center;
+  font-size: 16px;
+}
+.navbar-right-logout{
+  font-size: 15px;
+  width: 65px;
 }
