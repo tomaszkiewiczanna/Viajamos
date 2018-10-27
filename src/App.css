@@ -130,6 +130,7 @@ body{
   justify-content: space-between;
   align-items: center;
   height: 60px;
+  padding: 0 2%;
 }
 .navbar-right{
   display: flex;
@@ -140,4 +141,26 @@ body{
 .navbar-right-logout{
   font-size: 15px;
   width: 65px;
+}
+.tripstails-container{
+  text-align: center;
+}
+.tripstails-header{
+
+}
+.triptails{
+  width: 100px;
+  height: 100px;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+.triptails-name{
+
+}
+.triptails-date{
+
 }
